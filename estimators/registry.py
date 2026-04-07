@@ -12,6 +12,7 @@ from estimators.ai_ensemble import AIEnsembleEstimator
 from estimators.sports import SportsEstimator
 from estimators.weather import WeatherEstimator
 from estimators.crypto import CryptoEstimator
+from estimators.geopolitical import GeopoliticalEstimator
 
 logger = logging.getLogger(__name__)
 
@@ -37,6 +38,8 @@ def _get_estimator(name: str) -> Estimator | None:
             _estimators[name] = WeatherEstimator()
         elif name == "crypto":
             _estimators[name] = CryptoEstimator()
+        elif name == "gdelt_news":
+            _estimators[name] = GeopoliticalEstimator()
         else:
             logger.debug(f"No estimator registered for '{name}'")
             return None

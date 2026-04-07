@@ -40,6 +40,10 @@ class Settings(BaseSettings):
     KALSHI_API_KEY_ID: str = ""
     KALSHI_PRIVATE_KEY_PATH: str = ""
 
+    # === ACLED (Armed Conflict Data) ===
+    ACLED_API_KEY: str = ""            # Free at https://acleddata.com/
+    ACLED_EMAIL: str = ""
+
     # === Edge & Entry ===
     MIN_EDGE_PCT: float = 0.01         # 1% min edge — ultra-aggressive for paper training
     EXIT_EDGE_PCT: float = 0.005       # Exit at 0.5% edge — take profits fast
